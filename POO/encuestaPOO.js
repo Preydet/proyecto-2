@@ -51,7 +51,7 @@ class Encuesta {
         console.log(`Resultados de la encuesta: ${this.titulo}\n`);
         this.preguntas.forEach((pregunta, i)=>{
             console.log(`${i + 1}. ${pregunta.texto}`);
-            console.log(`Respuesta: ${pregunta.opcionSelecciona}\n`);
+            console.log(`Respuesta: ${pregunta.opcionSeleccionada}\n`);
         });
     }
 }
