@@ -10,7 +10,7 @@ function pedirTextoNoVacio(mensaje){
 }
 function pedirOpciones(){
     let opciones = [];
-    while (opciones.lenght < 2) {
+    while (opciones.length < 2) {
         const entrada = prompt("Escribe al menos 2 opciones separadas por comas:");
         if (!entrada) {
             alert("No ingresaste nada. Intenta de nuevo.");
@@ -42,7 +42,7 @@ function crearEncuesta(){
     while (isNaN(numPreguntas) || numPreguntas < 8) {
         numPreguntas = parseInt(prompt("Número inválido. Ingrese al menos 8 preguntas:"));
     }
-    const preguntas = array.from({lenght: numPreguntas}, (_, i) => crearPregunta(i + 1));
+    const preguntas = Array.from({lenght: numPreguntas}, (_, i) => crearPregunta(i + 1));
 
     return {titulo, preguntas };
 }
@@ -52,7 +52,7 @@ function hacerPregunta(pregunta) {
         mensaje += `${i + 1}. ${op}\n`;
         });
     let eleccion = parseInt(prompt(mensaje + "Selecciona una opción (número):"));
-    while (isNaN(eleccion) || eleccion < 1 || eleccion > pregunta.opciones.lenght) {
+    while (isNaN(eleccion) || eleccion < 1 || eleccion > pregunta.opciones.length) {
         eleccion = parseInt(prompt("Opción inválida. Intenta de nuevo:\n" + mensaje));
     }
     return pregunta.opciones[eleccion - 1];
