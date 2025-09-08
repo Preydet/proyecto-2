@@ -25,10 +25,13 @@ Se presentan dos versiones de la solución:
 --------------------------------------------------
 
 /proyecto-encuesta/
-│
+
 ├─ index.html              => Página HTML para ejecutar JS
+
 ├─ encuesta-poo.js         => Versión en Programación Orientada a Objetos
+
 ├─ encuesta-funcional.js   => Versión en Programación Funcional
+
 └─ README_Encuesta.txt     => Este archivo
 
 --------------------------------------------------
