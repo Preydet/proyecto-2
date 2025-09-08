@@ -35,14 +35,14 @@ function crearPregunta(numero) {
         respuesta: null
     };
 }
-function crearEncuesta(){
+function crearEncuesta() {
     alert("Bienvenido al creador de encuestas");
     const titulo = pedirTextoNoVacio("Escribe el título de la encuesta:");
     let numPreguntas = parseInt(prompt("¿Cuántas preguntas quieres agregar? (mínimo 8):"));
     while (isNaN(numPreguntas) || numPreguntas < 8) {
         numPreguntas = parseInt(prompt("Número inválido. Ingrese al menos 8 preguntas:"));
     }
-    const preguntas = Array.from({lenght: numPreguntas}, (_, i) => crearPregunta(i + 1));
+    const preguntas = Array.from({length: numPreguntas}, (_, i) => crearPregunta(i + 1));
 
     return {titulo, preguntas };
 }
